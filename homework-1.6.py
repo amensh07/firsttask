@@ -4,6 +4,6 @@ print('Это хорошее начало!Теперь напиши скольк
 goal = float(input())
 goal_days = 1
 while goal > start:
-    start = start + 0.1*start
+    start = start + 0.1 * start
     goal_days += 1
 print(f'Вы достигните желаемого километража через {goal_days} дней')

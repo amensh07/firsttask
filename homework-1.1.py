@@ -10,5 +10,5 @@ print(f'Добро пожаловать в {town}')
 print('Добро пожаловать в {}'.format(town))
 s = input()
 d = input()
-k = s+d
+k = s + d
 print(k)
