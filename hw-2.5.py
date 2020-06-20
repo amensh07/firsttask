@@ -1,8 +1,8 @@
-my_list = [10, 8, 6, 2, 1]
+my_list = [10, 8, 6, 3, 3, 2, 1]
 new = int(input('Введие новый элемент рейтинга'))
 for i in my_list:
-    if i > new >= my_list[my_list.index(i) + 1]:
-        my_list.insert(my_list.index(i) + 1, new)
+    if new >= my_list[my_list.index(i) + 1]:
+        my_list.insert(my_list.index(new)+my_list.count(new), float(new))
         print(my_list)
         break
     elif new > i:

@@ -1,21 +1,17 @@
-key = ["название", "цена", "количество", "ед"]
+features = {'название': '', 'цена': '', 'количество': '', 'ед': ''}
 my_list = []
-analysis = []
-quest = int(input('Сколько будет товаров?'))
-n = 1
-while n <= quest:
-    name = input('Напишите название товара')
-    price = input('Уточните цену товара')
-    qty = input('Подскажите количество товара')
-    unit = input('Напишите единицы измерения')
-    values = [name, price, qty, unit]
-    print(values)
-    my_dict = dict(zip(key, values))
-    print(my_dict)
-    my_list.append((n, dict))
-    n += 1
-    analysis = dict({'название': my_dict.get('название'), 'цена': my_dict.get('цена'),
-                     'количество': my_dict.get('количество'),
-                     'ед': my_dict.get('ед')})
-
-    print(analysis)
+analysis = {'название': [], 'цена': [], 'количество': [], 'ед': []}
+n = 0
+while True:
+    if input("Для выхода из программы нажмите 'Q', для продолжения 'Enter'"):
+        break
+    n = + 1
+    for f in features.keys():
+        _ = input(f'Введите значение свойства "{f}": ')
+        features[f] = int() if (f == 'цена' or f == 'количество') else _
+        analysis[f].append(features[f])
+    my_list.append((n, features))
+    print(f'\n Текущая аналитика по товарам: \n {"*" * 30}')
+    for key, value in analysis.items():
+        print(f'{key[:25]:>30}:{value}')
+    print("*" * 30)
