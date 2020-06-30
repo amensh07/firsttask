@@ -11,6 +11,8 @@ try:
     def my_func(hours, stavka, premia):
         """Считает заработную плату по введенным параметрам"""
         return f'Ваша заработная плата равна: {int(hours) * int(stavka) + int(premia)}'
+
+
     print(my_func(hours, stavka, premia))
 
 except ValueError:
