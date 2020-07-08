@@ -30,8 +30,5 @@ class Cell:
 cells1 = Cell(11)
 cells2 = Cell(66)
 print(cells1.__str__())
-# print(cells1.__sub__(5))  при таком вызове дает ошибку 'int' object has no attribute 'qua'.
-# Я понимаю, что он считает, что к строчке нельзя прибавить число, но как мне это изменить ???
-# Где надо поставить int ?
 print(cells2.make_order(4))
 print(cells1.make_order(100))
